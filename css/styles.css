@@ -267,15 +267,20 @@ background-color: var(--clr-teal);
 	}
 
 	h2 {
+		margin-top: 1em;
 		font-size: 2.5em;
+		margin-bottom: 1.5em;;
 	}
+	.col-lg-8{
+	padding:0;
+}
 
-	hr {
-		margin: 2.5rem
+	.side-panel{
+		
 	}
-
 	.row-1, .row-2 {
 		display: flex;
+		justify-content: space-between;
 		width: 100%;
 		margin-bottom: .5rem;
 	}
@@ -285,19 +290,22 @@ background-color: var(--clr-teal);
 	}
 
 	.icon-large {
-		height: 5.5rem;
-		width: 5.5rem;
+		height: 6rem;
+		width: 6rem;
 		font-size: 15px;
 		font-weight: bold;
+		border: 6px solid var(--clr-white);
+		
 
 	}
-	.icon-layer1, .icon-layer2{
-		margin: 0 2rem;
+	.icon-layer-1, .icon-layer-2{
+		margin: 0 1.3rem;
+		margin-bottom: 1.5em;
 	}
 
 	.content-images {
-		width: 550px;
-		height: 175px;
+		width: 350px;
+		height: 200px;
 	}
 
 	.pics{
@@ -306,25 +314,50 @@ background-color: var(--clr-teal);
 
 	.tweet-image{
 		display: flex;
+		flex-direction: row;
+		;
+		
 	}
 
 	.tweet-image img{
-        width: 60px;
-		height: 50px;
+        width: 65px;
+		height: 60px;
+		border: 2px solid #d1d1d1;
 	}
 
 	.selected-title{
-		margin-bottom: 7rem;
+		font-size: 0.9rem;
+		margin-bottom: 6rem;
 	}
     
 	.the-last{
+		font-size: 0.9rem;
 		text-align: center;
+		margin-bottom: 3rem;
 	}
 
+	.col-lg-4{
+		padding:0;
+	}
+	.tweet-image{
+		margin-bottom: 3rem;
+	}
 
+	.tweet-image h4{
+		margin-left: 15px;
+		font-size: 1.6rem;
+		
+	}
 
-
-
+	.line{
+		background-color: grey;
+		opacity: 40%;
+		height: 1px;
+		width: 100%;
+		margin-bottom: 2.5rem;
+		
+		
+	}
 }
 
 
