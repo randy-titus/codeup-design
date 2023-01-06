@@ -142,8 +142,7 @@ h5{
 
 .icon-layer-1{ 
 	margin-bottom: 0.8rem;
-/*	margin-right: 0;*/
-	margin:;
+	
 
 }
 
@@ -255,6 +254,8 @@ background-color: var(--clr-teal);
 }
 
 
+
+
 @media screen and (min-width: 992px) and (max-width:1199px) {
 
 	.company-name{
@@ -271,13 +272,7 @@ background-color: var(--clr-teal);
 		font-size: 2.5em;
 		margin-bottom: 1.5em;;
 	}
-	.col-lg-8{
-	padding:0;
-}
 
-	.side-panel{
-		
-	}
 	.row-1, .row-2 {
 		display: flex;
 		justify-content: space-between;
@@ -315,14 +310,15 @@ background-color: var(--clr-teal);
 	.tweet-image{
 		display: flex;
 		flex-direction: row;
-		;
+		
 		
 	}
 
 	.tweet-image img{
-        width: 65px;
-		height: 60px;
+        width: 80px;
+		height: 80px;
 		border: 2px solid #d1d1d1;
+		margin-left: 2.8rem
 	}
 
 	.selected-title{
@@ -339,12 +335,16 @@ background-color: var(--clr-teal);
 	.col-lg-4{
 		padding:0;
 	}
-	.tweet-image{
-		margin-bottom: 3rem;
+
+	.tweet-image {
+		margin-bottom: 2.5rem;
 	}
+
+
 
 	.tweet-image h4{
 		margin-left: 15px;
+		margin-right: 1.3rem;
 		font-size: 1.6rem;
 		
 	}
@@ -356,8 +356,28 @@ background-color: var(--clr-teal);
 		width: 100%;
 		margin-bottom: 2.5rem;
 		
+	}
+
+
+
+	article{ 
+		margin: 4rem 0 0 2.7rem ;
+	}
+
+	.last-tweet{
+		padding-bottom: 0.5em;
+		margin:0
 		
 	}
+
+ article p{
+	font-family: var(--ff-abel);
+	font-size: 1rem;
+	width: 94%;
+
+	
+ }
+
 }
 
 
