@@ -204,7 +204,7 @@ background-color: var(--clr-teal);
 }
 
 
-
+/*-------------Tablet-----------------*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
 
 	.title-icons {
@@ -255,7 +255,49 @@ background-color: var(--clr-teal);
 }
 
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width:1199px) {
+
+	.company-name{
+		margin-right:1.5em;
+	}
+
+	h1{
+		font-size: 3.5rem;
+		padding-top: 15px;
+		margin-bottom: 0.8em;
+	}
+
+	h2 {
+		font-size: 2.5em;
+		margin-bottom: 1.4em;
+	}
+
+	hr {
+
+		margin: 2.5rem
+	}
+
+	.row-1, .row-2 {
+		display: flex;
+		width: 100%;
+		margin-bottom: .5rem;
+	}
+
+	.title-icons {
+		flex-direction: row;
+		
+	}
+
+	.icon-large {
+		height: 5.5rem;
+		width: 5.5rem;
+		font-size: 15px;
+		font-weight: bold;
+
+	}
+	.icon-layer-1, .icon-layer-2{
+		margin: 0 1rem 2rem 1rem;
+	}
 
 }
 
