@@ -34,26 +34,31 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 :root {
-	/*colors*/
-	--clr-red: #e6563b;
+	/*primary colors*/
+	--clr-light-red: #e6563b;
+	--clr-red: red;
 	--clr-yellow: #eb9d3a;
 	--clr-money: #7cb06c;
 	--clr-teal: #00aba9;
-	--clr-white: #f0f0f0;
-	--clr-gray: #e6e6e6;
 
-	/*Fonts	*/
+	/*neutral colors*/
+	--clr-white: #f0f0f0;
+	--clr-light-gray: #e6e6e6;
+	--clr-gray: #d1d1d1;
+	--clr-dark-gray: gray;
+
+	/*fonts	*/
 	--ff-anton: 'Anton', sans-serif;
 	--ff-abel: 'Abel', sans-serif;
-	/*tex styles*/
-	--ts-align-center: center;
 
+	/*text styles*/
+	--ts-align-center: center;
 }
 
 
 
 body {
-	background-color: var(--clr-gray);
+	background-color: var(--clr-light-gray);
 	font-family: var(--ff-anton);
 }
 
@@ -74,13 +79,13 @@ body {
 {
     padding: 0;
     margin: 0;
-    background: red;
+    background: var(--clr-red);
     vertical-align: bottom;
 }
 
 
 
-/*HEADING CONTENT----------------------*/
+/*MAIN TITLE, ICONS----------------------*/
 
 h1 {
 	margin-top: 1.5rem;
@@ -98,7 +103,15 @@ h5{
 	font-size: 12.5px;
 	font-weight: bold;
 	margin: 7px 0 10px 5px;
+}
 
+.content-images:hover {
+	opacity: 0.5;
+}
+
+.title {
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 .selected-title{
@@ -106,44 +119,34 @@ h5{
 }
 
 .icon-large {
-	height: 3.5rem;
-	width: 3.5rem;
-	/* background-color: yellow; */
-	font-size: 8px;
+	height: 4.3rem;
+	width: 4.3rem;
+	font-size: 9px;
 	border-radius: 50%;
 	border: 4px solid var(--clr-white);
 	color: var(--clr-white);
+}
+
+.icon-large span {
+	font-weight: bold;
 }
 
 .title-icons {
 	margin-top: 2rem;
 	margin-bottom: 2em;
 	display: flex;
-
 	justify-content: center;
-	/* background-color: teal; */
-
-
 	flex-direction: column;
 }
 
-/*-----------------------------------*/
 
 .layer-1, .layer-2 {
 	display: flex;
 	justify-content: center;
-
 }
-
-
-
-/*----------------------------------*/
-
 
 .icon-layer-1{ 
 	margin-bottom: 0.8rem;
-	
-
 }
 
 .icon-design, .icon-develop {
@@ -156,9 +159,8 @@ h5{
 	margin-right: .5rem;
 } 
 
-
 .icon-design{
-	background-color: var(--clr-red);
+	background-color: var(--clr-light-red);
 }
 
 .icon-support{
@@ -168,19 +170,18 @@ background-color: var(--clr-money);
 .icon-develop{
 background-color: var(--clr-yellow);
 }
-
 	.icon-host{
 background-color: var(--clr-teal);
 }
 
+/*-----Selected work section------*/
 .content-images {
-	border: 5px solid #d1d1d1;
+	border: 5px solid var(--clr-gray);
 }
 
 .pic-info{
 	display: flex;
 	justify-content: space-between;
-	
 }
 
 .mini-icons{
@@ -195,16 +196,45 @@ background-color: var(--clr-teal);
 	border-radius: 50%;
 	text-align: center;
 	margin-left: 4px;
-
 }
 
 .selected-title {
 	margin-bottom: 2rem;
 }
 
+/*-----Right-side panel------*/
+.side-panel {
+	display: none;
+}
+
+
+
+/*------------Medium-mobile breakpoint-----------*/
+@media screen and (min-width: 665px) and (max-width: 767px) {
+	.heading-title {
+		display: flex;
+		justify-content: center;
+	}
+
+	h1 {
+		width: 60%;
+	}
+}
+
 
 /*-------------Tablet-----------------*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
+
+	/*MAIN TITLE, ICONS----------------------*/
+
+	.heading-title {
+		display: flex;
+		justify-content: center;
+	}
+
+	h1 {
+		width: 60%;
+	}
 
 	.title-icons {
 		flex-direction: row;
@@ -224,9 +254,16 @@ background-color: var(--clr-teal);
 		font-size: 2.5rem;
 	}
 
-	hr {
-		margin: 2.5rem
+	.line{
+		background-color: var(--clr-dark-gray);
+		opacity: 40%;
+		height: 1px;
+		width: 100%;
+		margin-bottom: 2.5rem;
 	}
+
+
+	/*-----Selected work section------*/
 
 	.row-1, .row-2 {
 		display: flex;
@@ -237,14 +274,11 @@ background-color: var(--clr-teal);
 	.content-images {
 		width: 550px;
 		height: 200px;
-
 	}
 
 	.pic-3 img {
 		box-sizing: border-box;
 		object-fit: fill;
-
-
 	}
 
 	.pics {
@@ -255,8 +289,14 @@ background-color: var(--clr-teal);
 
 
 
-
+/*-----------Desktop------------*/
 @media screen and (min-width: 992px) and (max-width:1199px) {
+
+	.side-panel {
+		display: flex;
+	}
+
+	/*NAVBAR-Desktop-----------------------------------*/
 
 	.company-name{
 		margin-right:1.5em;
@@ -290,13 +330,14 @@ background-color: var(--clr-teal);
 		font-size: 15px;
 		font-weight: bold;
 		border: 6px solid var(--clr-white);
-		
-
 	}
+
 	.icon-layer-1, .icon-layer-2{
 		margin: 0 1.3rem;
 		margin-bottom: 1.5em;
 	}
+
+	/*-----Selected work section-Desktop-----*/
 
 	.content-images {
 		width: 350px;
@@ -310,15 +351,17 @@ background-color: var(--clr-teal);
 	.tweet-image{
 		display: flex;
 		flex-direction: row;
-		
-		
 	}
 
 	.tweet-image img{
         width: 80px;
 		height: 80px;
-		border: 2px solid #d1d1d1;
+		border: 2px solid var(--clr-gray);
 		margin-left: 2.8rem
+	}
+
+	.mobile:hover {
+		opacity: 0.5;
 	}
 
 	.selected-title{
@@ -326,6 +369,8 @@ background-color: var(--clr-teal);
 		margin-bottom: 6rem;
 	}
     
+	/*----------RIGHT-SIDE PANEL-Desktop------------*/
+
 	.the-last{
 		font-size: 0.9rem;
 		text-align: center;
@@ -346,19 +391,15 @@ background-color: var(--clr-teal);
 		margin-left: 15px;
 		margin-right: 1.3rem;
 		font-size: 1.6rem;
-		
 	}
 
 	.line{
-		background-color: grey;
+		background-color: var(--clr-dark-gray);
 		opacity: 40%;
 		height: 1px;
 		width: 100%;
 		margin-bottom: 2.5rem;
-		
 	}
-
-
 
 	article{ 
 		margin: 4rem 0 0 2.7rem ;
@@ -367,17 +408,154 @@ background-color: var(--clr-teal);
 	.last-tweet{
 		padding-bottom: 0.5em;
 		margin:0
-		
 	}
 
- article p{
+ 	article p{
 	font-family: var(--ff-abel);
 	font-size: 1rem;
 	width: 94%;
+ 	}
+
+}
+
+/*-----------XL-DISPLAYS-------------*/
+@media screen and (min-width: 1200px)  {
 
 	
- }
 
+	
+
+	.company-name{
+		font-size: 1.3rem;
+		paddding-left: 0;
+		margin-top: 0.7rem;
+	}
+
+	.nav-link {
+		margin-bottom: 1rem;
+	}
+
+	.company-name{
+		margin-right:1.5em;
+	}
+
+	h1{
+		font-size: 3.1rem;
+		margin-top:1rem;
+	}
+
+	h2 {
+		margin-top: 1em;
+		font-size: 1.9em;
+		margin-bottom: 1.5em;;
+	}
+
+	.row-1, .row-2 {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 0rem;
+	}
+
+	.row-1 {
+		margin-bottom: -3.5rem;
+	}
+
+	.title-icons {
+		flex-direction: row;
+	}
+
+	.icon-large {
+		height: 4.9rem;
+		width: 4.9rem;
+		font-size: 12px;
+		font-weight: bold;
+		border: 6px solid var(--clr-white);
+	}
+
+	.icon-layer-1, .icon-layer-2{
+		margin: 0 0.8rem;
+		margin-bottom: 1.5em;
+	}
+
+	.line{
+		background-color: var(--clr-dark-gray);
+		opacity: 40%;
+		height: 1px;
+		width: 100%;
+		margin-bottom: 2.5rem;
+	}
+
+	.content-images {
+		width: 350px;
+		height: 230px;
+	}
+
+	/*----------RIGHT-SIDE PANEL-XL-DISPLAYS------------*/
+
+	.side-panel {
+		display: flex;
+	}
+
+	.pics{
+		margin: 0 0.8rem 3.7rem;
+	}
+
+	.tweet-image{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.tweet-image img{
+        width: 65px;
+		height: 65px;
+		border: 2px solid var(--clr-gray);
+		margin-left: 2.8rem;
+		margin-bottom: 2.5rem;
+
+	}
+
+	.tweets:hover, .tweet-image h4:hover {
+		opacity: 0.5;
+	}
+
+	.selected-title{
+		font-size: 0.9rem;
+		margin-bottom: 3rem;
+	}
+    
+	.the-last{
+		font-size: 0.9rem;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.col-lg-4{
+		padding:0;
+	}
+
+	.tweet-image h4{
+		margin-left: 15px;
+		margin-right: 1.3rem;
+		font-size: 1.4rem;
+	}
+
+	
+
+	article{ 
+		margin: 4rem 0 0 2.7rem ;
+	}
+
+	.last-tweet{
+		padding-bottom: 0.5em;
+		margin:0
+	}
+
+ 	article p{
+	font-family: var(--ff-abel);
+	font-size: 0.85rem;
+	width: 94%;
+	 }
 }
 
 
