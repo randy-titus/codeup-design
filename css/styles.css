@@ -404,6 +404,11 @@ background-color: var(--clr-teal);
 		font-size: 1.6rem;
 	}
 
+	.tweets:hover, .tweet-image h4:hover {
+		opacity: 0.5;
+	}
+
+
 	article{ 
 		margin: 4rem 0 0 2.7rem ;
 	}
